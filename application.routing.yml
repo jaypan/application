@@ -1,0 +1,30 @@
+# The application page, for new applications.
+application.application_page:
+  path: '/apply'
+  defaults:
+    _controller: '\Drupal\application\Controller\ApplicationController::applicationPage'
+    _title: 'Apply'
+  requirements:
+    _access: 'TRUE'
+
+# The application edit page. A proper implementation would have a custom access
+# callback that would check that the owner of the noce is the current user, or a
+# user with a given admin permission. The access check has been left out for
+# this example however.
+application.application_edit_page:
+  path: '/apply/{application}'
+  defaults:
+    _controller: '\Drupal\application\Controller\ApplicationController::applicationEditPage'
+    _title: 'Edit Application'
+  requirements:
+    # This next line opens up access to edit applications to anyone. Remove it
+    # and replace with a proper access callback.
+    _access: 'TRUE'
+    application: '^[0-9]+$'
+  options:
+    parameters:
+      # The {application} element of the path needs to load an application node.
+      # These next two lines tells the route to use the value passed in
+      # {application} and use that to load an application node.
+      application:
+        type: entity:node

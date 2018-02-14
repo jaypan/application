@@ -1,0 +1,21 @@
+uuid: 7d4e48fb-1e77-487b-a732-588e1ee914f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_birthdate
+    - node.type.application
+  module:
+    - datetime
+id: node.application.field_birthdate
+field_name: field_birthdate
+entity_type: node
+bundle: application
+label: Birthdate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

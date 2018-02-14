@@ -1,0 +1,4 @@
+name: Application
+description: A multistep form example.
+type: module
+core: 8.x

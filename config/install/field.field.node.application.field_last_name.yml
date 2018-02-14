@@ -1,0 +1,19 @@
+uuid: b0621115-4591-42f6-b66b-073335702498
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_name
+    - node.type.application
+id: node.application.field_last_name
+field_name: field_last_name
+entity_type: node
+bundle: application
+label: 'Last Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

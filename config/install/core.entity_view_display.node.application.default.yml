@@ -1,0 +1,63 @@
+uuid: 89230fde-8733-4a40-9de5-a0e414420786
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.application.field_address
+    - field.field.node.application.field_birthdate
+    - field.field.node.application.field_first_name
+    - field.field.node.application.field_last_name
+    - field.field.node.application.field_telephone
+    - node.type.application
+  module:
+    - datetime
+    - user
+id: node.application.default
+targetEntityType: node
+bundle: application
+mode: default
+content:
+  field_address:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_birthdate:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_first_name:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telephone:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

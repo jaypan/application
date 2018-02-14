@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Provides a multi-step form example.
+ *
+ * The Application module provides a multi-step form example. The module also
+ * creates a new content type, Application, that is used to store data
+ * for an application.
+ *
+ * This module requires PHP 7.1, so if PHP 7.0 is used, all functions that
+ * typecast a return value of VOID must be returned, as this was not supported
+ * until PHP 7.1.
+ *
+ * The idea behind this module is that Drupal\application\Form\ApplicationForm
+ * is a multi-step form. Each step of the form extends
+ * \Drupal\application\Form\Step\ApplicationFormStep. This class implements
+ * \Drupal\application\Form\Step\ApplicationFormStepInterface, so any step must
+ * implement all of the functions declared in the interface.
+ *
+ * The form stores a Node of type 'application', which is used both to store any
+ * submitted values, as well as provide default values for the form elements.
+ * After the review step is submitted, the node is associated to the current
+ * user, and saved, at which point it becomes eligible to be edited.
+ */
